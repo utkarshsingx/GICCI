@@ -2,7 +2,7 @@ import { platformMilestones } from "@/mocks/data";
 
 export const PlatformMilestonesSection = () => {
   return (
-    <section className="bg-neutral-surface py-16">
+    <section className="bg-neutral-surface py-12 md:py-16">
       <div className="container">
         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-teal">
           Platform Roadmap
@@ -11,7 +11,7 @@ export const PlatformMilestonesSection = () => {
           Milestones in building India&apos;s trade facilitation hub
         </h2>
 
-        <div className="mt-10 space-y-6">
+        <div className="mt-8 space-y-6">
           {platformMilestones.map((milestone, index) => (
             <div
               key={milestone.id}

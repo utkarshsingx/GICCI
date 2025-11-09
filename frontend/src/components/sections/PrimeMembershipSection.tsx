@@ -2,22 +2,22 @@ import { primeBenefits } from "@/mocks/data";
 
 export const PrimeMembershipSection = () => {
   return (
-    <section className="relative overflow-hidden py-16 text-white" id="prime">
+    <section className="relative overflow-hidden py-12 text-white md:py-16" id="prime">
       <div className="absolute inset-0 bg-brand-linear" aria-hidden />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(201,162,39,0.35),transparent_55%)]" aria-hidden />
-      <div className="container relative grid gap-10 md:grid-cols-[1fr_1.2fr] md:items-center">
-        <div>
+      <div className="container relative grid gap-10 text-center md:grid-cols-[1fr_1.2fr] md:items-center md:text-left">
+        <div className="space-y-4">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-gold">
             Prime Membership
           </p>
-          <h2 className="mt-3 text-3xl font-semibold">
+          <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
             Priority visibility, verified leads, and compliance acceleration
           </h2>
           <p className="mt-4 text-sm text-white/80">
             Designed for growth-ready MSMEs seeking deeper integration into global value
             chains with institutional trust signals and concierge support.
           </p>
-          <div className="mt-6 flex gap-4">
+          <div className="mt-6 flex flex-wrap justify-center gap-4 md:justify-start">
             <a
               href="#apply-prime"
               className="rounded-full bg-brand-gold px-5 py-3 text-sm font-semibold uppercase tracking-wide text-brand-navy hover:bg-white"
@@ -33,7 +33,7 @@ export const PrimeMembershipSection = () => {
           </div>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 md:gap-6">
           {primeBenefits.map((benefit) => (
             <article
               key={benefit.id}

@@ -2,7 +2,7 @@ import { alliances } from "@/mocks/data";
 
 export const GlobalAlliancesSection = () => {
   return (
-    <section className="section-shell py-16" id="alliances">
+    <section className="section-shell py-12 md:py-16" id="alliances">
       <div className="container">
         <div className="max-w-2xl">
         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-teal">
@@ -17,7 +17,7 @@ export const GlobalAlliancesSection = () => {
         </p>
         </div>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-3">
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           {alliances.map((alliance) => (
             <article
               key={alliance.id}

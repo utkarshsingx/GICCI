@@ -2,7 +2,7 @@ import { knowledgeResources } from "@/mocks/data";
 
 export const KnowledgeCapacitySection = () => {
   return (
-    <section className="section-shell py-16" id="knowledge">
+    <section className="section-shell py-12 md:py-16" id="knowledge">
       <div className="container">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
@@ -22,7 +22,7 @@ export const KnowledgeCapacitySection = () => {
           </a>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 md:grid-cols-3 md:gap-6">
           {knowledgeResources.map((resource) => (
             <article
               key={resource.id}

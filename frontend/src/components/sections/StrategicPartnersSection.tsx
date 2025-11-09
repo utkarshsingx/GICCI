@@ -2,7 +2,7 @@ import { strategicPartners } from "@/mocks/data";
 
 export const StrategicPartnersSection = () => {
   return (
-    <section className="container py-16">
+    <section className="container py-12 md:py-16">
       <div className="max-w-2xl">
         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-teal">
           Strategic Partnerships
@@ -16,7 +16,7 @@ export const StrategicPartnersSection = () => {
         </p>
       </div>
 
-      <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
         {strategicPartners.map((partner) => (
           <article key={partner.id} className="surface-card space-y-3">
             <h3 className="text-xl font-semibold text-brand-navy">{partner.name}</h3>

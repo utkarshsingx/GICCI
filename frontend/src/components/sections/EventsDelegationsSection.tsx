@@ -2,7 +2,7 @@ import { events } from "@/mocks/data";
 
 export const EventsDelegationsSection = () => {
   return (
-    <section className="relative overflow-hidden py-16" id="events">
+    <section className="relative overflow-hidden py-12 md:py-16" id="events">
       <div className="absolute inset-0 bg-neutral-soft" aria-hidden />
       <div className="absolute inset-0 bg-brand-radial opacity-80" aria-hidden />
       <div className="container relative">
@@ -24,7 +24,7 @@ export const EventsDelegationsSection = () => {
           </a>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 md:grid-cols-3 md:gap-6">
           {events.map((event) => (
             <article
               key={event.id}

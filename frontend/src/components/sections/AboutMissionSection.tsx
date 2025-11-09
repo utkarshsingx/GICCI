@@ -1,6 +1,6 @@
 export const AboutMissionSection = () => {
   return (
-    <section className="container py-16">
+    <section className="container py-12 md:py-16">
       <div className="grid gap-10 md:grid-cols-2">
         <div className="space-y-4">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-teal">

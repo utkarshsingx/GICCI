@@ -2,7 +2,7 @@ import { sectorCouncils } from "@/mocks/data";
 
 export const SectorCouncilGrid = () => {
   return (
-    <section className="container py-16" id="sectors">
+    <section className="container py-12 md:py-16" id="sectors">
       <div className="max-w-2xl">
         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-teal">
           Sector Councils
@@ -17,7 +17,7 @@ export const SectorCouncilGrid = () => {
         </p>
       </div>
 
-      <div className="mt-10 grid gap-6 lg:grid-cols-3">
+      <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
         {sectorCouncils.map((sector) => (
           <article key={sector.id} className="surface-card space-y-4">
             <div>

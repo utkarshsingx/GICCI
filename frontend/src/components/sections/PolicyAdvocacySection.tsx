@@ -2,7 +2,7 @@ import { policyBriefs } from "@/mocks/data";
 
 export const PolicyAdvocacySection = () => {
   return (
-    <section className="section-shell border-y border-neutral-border/40 py-16" id="policy">
+    <section className="section-shell border-y border-neutral-border/40 py-12 md:py-16" id="policy">
       <div className="container">
         <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
           <div className="max-w-xl">
@@ -22,7 +22,7 @@ export const PolicyAdvocacySection = () => {
           </a>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 md:grid-cols-3 md:gap-6">
           {policyBriefs.map((brief) => (
             <article
               key={brief.id}

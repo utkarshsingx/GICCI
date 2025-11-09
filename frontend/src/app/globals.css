@@ -80,11 +80,11 @@ body::before {
 
 @layer components {
   .surface-card {
-    @apply rounded-2xl bg-neutral-surface p-6 shadow-card;
+    @apply rounded-2xl bg-neutral-surface p-5 shadow-card md:p-6;
   }
 
   .glass-panel {
-    @apply rounded-2xl border border-white/40 bg-white/70 p-6 backdrop-blur-lg shadow-glow;
+    @apply rounded-2xl border border-white/40 bg-white/70 p-5 backdrop-blur-lg shadow-glow md:p-6;
   }
 }
 

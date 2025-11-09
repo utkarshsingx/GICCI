@@ -2,10 +2,10 @@ import { contactChannels } from "@/mocks/data";
 
 export const ContactSupportSection = () => {
   return (
-    <section className="relative overflow-hidden py-16" id="contact">
+    <section className="relative overflow-hidden py-12 md:py-16" id="contact">
       <div className="absolute inset-0 bg-neutral-soft" aria-hidden />
       <div className="absolute inset-0 bg-brand-radial opacity-70" aria-hidden />
-      <div className="container relative grid gap-16 lg:grid-cols-[1fr_1.1fr]">
+      <div className="container relative grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-teal">
             Contact & Support
@@ -17,7 +17,7 @@ export const ContactSupportSection = () => {
             Reach out to specialised desks for policy queries, membership assistance,
             and global trade intelligence support.
           </p>
-          <div className="mt-8 grid gap-4">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {contactChannels.map((channel) => (
               <div
                 key={channel.id}

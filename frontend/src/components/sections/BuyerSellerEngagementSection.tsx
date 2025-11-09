@@ -8,8 +8,8 @@ const statusStyles: Record<string, string> = {
 
 export const BuyerSellerEngagementSection = () => {
   return (
-    <section className="container py-16" id="matchmaking">
-      <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+    <section className="container py-12 md:py-16" id="matchmaking">
+      <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-teal">
             Buyer–Seller Engagement
@@ -27,9 +27,9 @@ export const BuyerSellerEngagementSection = () => {
         </a>
       </div>
 
-      <div className="mt-8 overflow-hidden rounded-2xl border border-brand-blue/15 bg-white/90 shadow-glow backdrop-blur">
+      <div className="mt-8 overflow-hidden rounded-2xl border border-brand-blue/15 bg-white/95 shadow-glow backdrop-blur">
         <table className="min-w-full divide-y divide-neutral-border/70 text-sm">
-          <thead className="bg-brand-blue/10 text-left uppercase tracking-[0.25em] text-brand-teal">
+          <thead className="bg-brand-blue/10 text-left text-xs uppercase tracking-[0.25em] text-brand-teal">
             <tr>
               <th className="px-4 py-3">Buyer</th>
               <th className="px-4 py-3">Seller</th>

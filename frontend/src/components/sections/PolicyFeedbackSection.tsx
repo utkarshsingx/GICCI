@@ -1,6 +1,6 @@
 export const PolicyFeedbackSection = () => {
   return (
-    <section className="container py-16" id="feedback">
+    <section className="container py-12 md:py-16" id="feedback">
       <div className="grid gap-10 lg:grid-cols-[1fr_1fr]">
         <div className="space-y-4">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-teal">

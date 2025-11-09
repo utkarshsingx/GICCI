@@ -2,8 +2,8 @@ import { marketInsights } from "@/mocks/data";
 
 export const MarketIntelligenceSection = () => {
   return (
-    <section className="container py-16" id="market">
-      <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+    <section className="container py-12 md:py-16" id="market">
+      <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div className="max-w-xl">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-teal">
             Market Intelligence & Reports
@@ -35,7 +35,7 @@ export const MarketIntelligenceSection = () => {
         </form>
       </div>
 
-      <div className="mt-10 grid gap-6 md:grid-cols-3">
+      <div className="mt-8 grid gap-5 sm:grid-cols-2 md:grid-cols-3 md:gap-6">
         {marketInsights.map((insight) => (
           <article
             key={insight.id}

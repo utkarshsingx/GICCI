@@ -2,7 +2,7 @@ import { featuredProfiles } from "@/mocks/data";
 
 export const FeaturedProfilesSection = () => {
   return (
-    <section className="container py-16" id="featured">
+    <section className="container py-12 md:py-16" id="featured">
       <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-teal">
@@ -24,7 +24,7 @@ export const FeaturedProfilesSection = () => {
         </a>
       </div>
 
-      <div className="mt-10 grid gap-6 lg:grid-cols-3">
+      <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
         {featuredProfiles.map((profile) => (
           <article key={profile.id} className="surface-card space-y-4">
             <div className="flex items-center justify-between">

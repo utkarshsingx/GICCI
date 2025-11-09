@@ -2,7 +2,7 @@ import { advisoryCouncil } from "@/mocks/data";
 
 export const AdvisoryCouncilSection = () => {
   return (
-    <section className="bg-neutral-surface py-16">
+    <section className="bg-neutral-surface py-12 md:py-16">
       <div className="container">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-teal">
@@ -17,7 +17,7 @@ export const AdvisoryCouncilSection = () => {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {advisoryCouncil.map((advisor) => (
             <article key={advisor.id} className="surface-card space-y-3">
               <div>
