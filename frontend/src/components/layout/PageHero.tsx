@@ -12,15 +12,19 @@ export const PageHero = ({
   actions,
 }: PageHeroProps) => {
   return (
-    <section className="bg-gradient-to-br from-brand-navy via-brand-teal to-brand-blue py-12 text-white md:py-16">
-      <div className="container flex flex-col gap-6 text-center md:flex-row md:items-center md:justify-between md:text-left">
+    <section className="relative overflow-hidden py-12 text-white md:py-16">
+      <div className="absolute inset-0 bg-gradient-to-br from-brand-navy via-brand-teal to-brand-blue" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(201,162,39,0.25),transparent_55%),radial-gradient(circle_at_bottom_left,rgba(31,111,235,0.18),transparent_45%)] opacity-80" />
+      <div className="relative container flex flex-col gap-6 text-center md:flex-row md:items-center md:justify-between md:text-left">
         <div className="mx-auto max-w-3xl md:mx-0">
           {eyebrow ? (
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-gold">
               {eyebrow}
             </p>
           ) : null}
-          <h1 className="mt-2 text-3xl font-semibold md:text-4xl">{title}</h1>
+          <h1 className="mt-2 text-3xl font-semibold leading-tight md:text-[44px]">
+            {title}
+          </h1>
           <p className="mt-4 text-sm text-white/80 md:text-base">{description}</p>
         </div>
         {actions ? (
@@ -29,6 +33,7 @@ export const PageHero = ({
           </div>
         ) : null}
       </div>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-brand-navy/40 via-transparent to-transparent" />
     </section>
   );
 };
