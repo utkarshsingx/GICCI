@@ -30,6 +30,19 @@ export const Header = () => {
     setIsMenuOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
+
   const isActiveLink = (href: string) => {
     if (href === "/") {
       return pathname === "/";
@@ -45,6 +58,8 @@ export const Header = () => {
     }
     return `${base} text-brand-navy hover:text-brand-blue hover:bg-brand-blue/10`;
   };
+
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <header className="sticky top-0 z-50">
@@ -68,7 +83,7 @@ export const Header = () => {
       </div>
 
       <div className="border-b border-white/40 bg-white/90 shadow-glow backdrop-blur-xl">
-        <div className="container grid items-center gap-y-3 py-3 md:grid-cols-[auto_1fr_auto] md:py-4">
+        <div className="container flex flex-wrap items-center justify-between gap-3 py-3 md:grid md:grid-cols-[auto_1fr_auto] md:items-center md:py-4">
           <Link
             href="/"
             className="flex items-center gap-3 pr-2 md:gap-4 md:pr-4"
@@ -79,7 +94,7 @@ export const Header = () => {
             <span className="flex flex-col gap-0.5">
               <span className="font-display text-sm font-semibold leading-tight text-brand-navy md:text-base">
                 <span className="whitespace-nowrap">Import–Export</span>
-                <br className="hidden md:block" />
+                <br />
                 <span className="whitespace-nowrap">Community</span>
               </span>
               <span className="text-[8px] font-medium uppercase tracking-[0.28em] text-brand-teal md:text-[9px]">
@@ -88,9 +103,14 @@ export const Header = () => {
             </span>
           </Link>
 
-          <nav className="hidden w-full max-w-4xl items-center justify-center gap-1 rounded-full border border-white/70 bg-white/90 px-3 py-2 shadow-glow md:mx-auto md:flex">
+          <nav className="hidden w-full max-w-3xl items-center justify-center gap-1 rounded-full border border-white/70 bg-white/95 px-3 py-2 shadow-glow md:mx-auto md:flex">
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} className={linkClassName(link.href)}>
+              <Link
+                key={link.href}
+                href={link.href}
+                className={linkClassName(link.href)}
+                onClick={closeMenu}
+              >
                 {link.label}
               </Link>
             ))}
@@ -143,13 +163,14 @@ export const Header = () => {
 
         {isMenuOpen ? (
           <div className="fixed inset-0 z-50 bg-brand-navy/85 backdrop-blur-md lg:hidden">
-            <div className="flex h-full flex-col justify-between">
+            <div className="flex h-full flex-col justify-between overflow-y-auto">
               <nav className="container mt-20 flex flex-col gap-4 text-white">
                 <div className="grid gap-2 text-xs uppercase tracking-[0.3em] text-brand-gold">
                   {utilityLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
+                      onClick={closeMenu}
                       className="rounded-full border border-white/30 px-4 py-2 text-center font-semibold hover:border-white hover:bg-white/10"
                     >
                       {link.label}
@@ -161,6 +182,7 @@ export const Header = () => {
                   <Link
                     key={link.href}
                     href={link.href}
+                    onClick={closeMenu}
                     className={`rounded-2xl border border-white/20 px-5 py-3 text-lg font-semibold tracking-wide ${
                       isActiveLink(link.href) ? "bg-white text-brand-navy" : "bg-white/10"
                     }`}
@@ -172,6 +194,7 @@ export const Header = () => {
               <div className="container mb-10 flex flex-col gap-3">
                 <Link
                   href="/login"
+                  onClick={closeMenu}
                   className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/40 px-5 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10"
                 >
                   <span className="h-2 w-2 rounded-full bg-white" />
@@ -179,6 +202,7 @@ export const Header = () => {
                 </Link>
                 <Link
                   href="/join"
+                  onClick={closeMenu}
                   className="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-gold px-5 py-3 text-sm font-semibold text-brand-navy shadow-card transition hover:bg-white"
                 >
                   <span className="h-2 w-2 rounded-full bg-brand-navy" />
