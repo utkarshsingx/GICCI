@@ -164,9 +164,21 @@ export const Header = () => {
         </div>
 
         {isMenuOpen ? (
-          <div className="fixed inset-0 z-50 bg-brand-navy/90 backdrop-blur-md lg:hidden">
-            <div className="flex h-full flex-col overflow-y-auto pt-20">
-              <nav className="flex flex-col gap-4 px-6 text-white">
+          <div className="fixed inset-0 z-[9999] bg-brand-navy/95 backdrop-blur-md lg:hidden">
+            <div className="flex h-full flex-col overflow-y-auto pt-20 pb-10">
+              <div className="flex items-center justify-between px-6 text-white">
+                <span className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-gold">
+                  Navigation
+                </span>
+                <button
+                  type="button"
+                  onClick={closeMenu}
+                  className="inline-flex items-center gap-2 rounded-full border border-white/30 px-3 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white hover:border-white hover:bg-white/10"
+                >
+                  Close
+                </button>
+              </div>
+              <nav className="mt-6 flex flex-col gap-4 px-6 text-white">
                 <div className="grid gap-2 text-xs uppercase tracking-[0.3em] text-brand-gold">
                   {utilityLinks.map((link) => (
                     <Link
