@@ -28,7 +28,8 @@ export const BuyerSellerEngagementSection = () => {
       </div>
 
       <div className="mt-8 overflow-hidden rounded-2xl border border-brand-blue/15 bg-white/95 shadow-glow backdrop-blur">
-        <table className="min-w-full divide-y divide-neutral-border/70 text-sm">
+        <div className="overflow-x-auto">
+          <table className="min-w-full divide-y divide-neutral-border/70 text-sm">
           <thead className="bg-brand-blue/10 text-left text-xs uppercase tracking-[0.25em] text-brand-teal">
             <tr>
               <th className="px-4 py-3">Buyer</th>
@@ -76,6 +77,7 @@ export const BuyerSellerEngagementSection = () => {
             ))}
           </tbody>
         </table>
+        </div>
       </div>
     </section>
   );
