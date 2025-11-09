@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-brand-navy: #0b1f3a;
+  --color-brand-blue: #1f6feb;
+  --color-brand-teal: #0f6f72;
+  --color-brand-gold: #c9a227;
+  --color-brand-sky: #39b9cb;
+
+  --color-neutral-background: #f4f7fa;
+  --color-neutral-surface: #ffffff;
+  --color-neutral-border: #e5e7eb;
+  --color-neutral-muted: #6b7280;
+
+  --color-accent-coral: #f26b5b;
+  --color-accent-emerald: #1aa37a;
+  --color-accent-amber: #f5a524;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-brand-navy);
+  background-color: var(--color-neutral-background);
+  background-image: radial-gradient(
+      circle at 10% 20%,
+      rgba(31, 111, 235, 0.08) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(57, 185, 203, 0.1) 0%,
+      transparent 50%
+    ),
+    linear-gradient(180deg, rgba(244, 247, 250, 0.4), rgba(255, 255, 255, 0.8));
+  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: linear-gradient(
+      rgba(11, 31, 58, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(11, 31, 58, 0.04) 1px, transparent 1px);
+  background-size: 120px 120px;
+  opacity: 0.6;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display text-brand-navy;
+  }
+
+  p,
+  span,
+  li {
+    @apply font-body text-neutral-muted;
+  }
+
+  a {
+    @apply text-brand-blue transition-colors duration-150;
+  }
+
+  a:hover {
+    @apply text-brand-gold;
+  }
+}
+
+@layer components {
+  .surface-card {
+    @apply rounded-2xl bg-neutral-surface p-6 shadow-card;
+  }
+
+  .glass-panel {
+    @apply rounded-2xl border border-white/40 bg-white/70 p-6 backdrop-blur-lg shadow-glow;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .section-shell {
+    @apply relative overflow-hidden;
+  }
+
+  .section-shell::before {
+    @apply pointer-events-none absolute inset-0;
+    content: "";
+    background-image: theme("backgroundImage.brand-radial");
+    opacity: 0.6;
+  }
+
+  .section-shell > * {
+    @apply relative z-10;
+  }
+}
