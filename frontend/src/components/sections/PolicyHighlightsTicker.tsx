@@ -9,7 +9,7 @@ export const PolicyHighlightsTicker = () => {
           Policy Highlights
         </p>
         <div className="flex-1">
-          <div className="flex min-w-full gap-3 overflow-x-auto pb-2">
+          <div className="no-scrollbar flex min-w-full gap-3 overflow-x-auto pb-2">
             {policyHighlights.map((item) => (
               <Link
                 key={item.id}

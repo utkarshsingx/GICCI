@@ -136,28 +136,30 @@ export const Header = () => {
           <button
             type="button"
             onClick={() => setIsMenuOpen((prev) => !prev)}
-            className="inline-flex items-center gap-3 rounded-full border border-brand-blue/30 bg-white px-4 py-2 text-sm font-semibold text-brand-navy shadow-glow transition hover:border-brand-blue hover:bg-brand-blue/10 hover:text-brand-blue lg:hidden"
+            className="inline-flex items-center gap-3 rounded-full border border-brand-blue/30 bg-white px-3 py-2 text-sm font-semibold text-brand-navy shadow-glow transition hover:border-brand-blue hover:bg-brand-blue/10 hover:text-brand-blue lg:hidden"
             aria-expanded={isMenuOpen}
             aria-label="Toggle navigation menu"
           >
-            <span className="flex flex-col gap-1">
-              <span
-                className={`block h-[2px] w-5 rounded-full bg-brand-blue transition ${
-                  isMenuOpen ? "translate-y-[6px] rotate-45" : ""
-                }`}
-              />
-              <span
-                className={`block h-[2px] w-4 rounded-full bg-brand-blue transition ${
-                  isMenuOpen ? "opacity-0" : ""
-                }`}
-              />
-              <span
-                className={`block h-[2px] w-5 rounded-full bg-brand-blue transition ${
-                  isMenuOpen ? "-translate-y-[6px] -rotate-45" : ""
-                }`}
-              />
+            <span className="flex h-9 w-9 items-center justify-center rounded-full border border-brand-blue/30 bg-white/70">
+              <span className="relative flex h-3 w-4 flex-col justify-between">
+                <span
+                  className={`h-[2px] w-full rounded-full bg-brand-blue transition-transform ${
+                    isMenuOpen ? "translate-y-[4px] rotate-45" : ""
+                  }`}
+                />
+                <span
+                  className={`h-[2px] w-full rounded-full bg-brand-blue transition-opacity ${
+                    isMenuOpen ? "opacity-0" : "opacity-100"
+                  }`}
+                />
+                <span
+                  className={`h-[2px] w-full rounded-full bg-brand-blue transition-transform ${
+                    isMenuOpen ? "-translate-y-[4px] -rotate-45" : ""
+                  }`}
+                />
+              </span>
             </span>
-            Menu
+            <span className="text-xs font-semibold uppercase tracking-[0.3em]">Menu</span>
           </button>
         </div>
 

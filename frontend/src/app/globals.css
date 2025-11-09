@@ -93,6 +93,15 @@ body::before {
     text-wrap: balance;
   }
 
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
   .section-shell {
     @apply relative overflow-hidden;
   }
