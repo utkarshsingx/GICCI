@@ -164,9 +164,9 @@ export const Header = () => {
         </div>
 
         {isMenuOpen ? (
-          <div className="fixed inset-0 z-50 bg-brand-navy/85 backdrop-blur-md lg:hidden">
-            <div className="flex h-full flex-col justify-between overflow-y-auto">
-              <nav className="container mt-20 flex flex-col gap-4 text-white">
+          <div className="fixed inset-0 z-50 bg-brand-navy/90 backdrop-blur-md lg:hidden">
+            <div className="flex h-full flex-col overflow-y-auto pt-20">
+              <nav className="flex flex-col gap-4 px-6 text-white">
                 <div className="grid gap-2 text-xs uppercase tracking-[0.3em] text-brand-gold">
                   {utilityLinks.map((link) => (
                     <Link
@@ -185,7 +185,7 @@ export const Header = () => {
                     key={link.href}
                     href={link.href}
                     onClick={closeMenu}
-                    className={`rounded-2xl border border-white/20 px-5 py-3 text-lg font-semibold tracking-wide ${
+                    className={`w-full rounded-2xl border border-white/20 px-5 py-3 text-lg font-semibold tracking-wide ${
                       isActiveLink(link.href) ? "bg-white text-brand-navy" : "bg-white/10"
                     }`}
                   >
@@ -193,11 +193,11 @@ export const Header = () => {
                   </Link>
                 ))}
               </nav>
-              <div className="container mb-10 flex flex-col gap-3">
+              <div className="mb-10 mt-6 flex flex-col gap-3 px-6">
                 <Link
                   href="/login"
                   onClick={closeMenu}
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/40 px-5 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-2xl border border-white/40 px-5 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10"
                 >
                   <span className="h-2 w-2 rounded-full bg-white" />
                   Trade Login
@@ -205,7 +205,7 @@ export const Header = () => {
                 <Link
                   href="/join"
                   onClick={closeMenu}
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-gold px-5 py-3 text-sm font-semibold text-brand-navy shadow-card transition hover:bg-white"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-gold px-5 py-3 text-sm font-semibold text-brand-navy shadow-card transition hover:bg-white"
                 >
                   <span className="h-2 w-2 rounded-full bg-brand-navy" />
                   Join Network
