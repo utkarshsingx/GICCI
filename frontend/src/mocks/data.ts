@@ -9,13 +9,17 @@ import {
   EventRecord,
   FeaturedProfile,
   FinanceTransaction,
+  PartnerAffiliation,
   KycDocumentStatus,
   KnowledgeResource,
+  KnowledgePreview,
   MarketInsight,
+  MarketPreview,
   EngagementThread,
   OnboardingTask,
   PerformanceMetric,
   PlatformMilestone,
+  PolicyHighlight,
   PolicyBrief,
   PolicyFeedbackItem,
   PrimeBenefit,
@@ -80,6 +84,39 @@ export const featuredProfiles: FeaturedProfile[] = [
     country: "Brazil",
     highlight: "Onboarded through DGFT verification and RAMP support",
     impactMetric: "5 new LATAM partners",
+  },
+];
+
+export const partnerAffiliations: PartnerAffiliation[] = [
+  {
+    id: "partner-ficci",
+    name: "FICCI",
+    logo: "/logos/ficci.svg",
+    type: "Chamber",
+  },
+  {
+    id: "partner-cii",
+    name: "CII",
+    logo: "/logos/cii.svg",
+    type: "Chamber",
+  },
+  {
+    id: "partner-assocham",
+    name: "ASSOCHAM",
+    logo: "/logos/assocham.svg",
+    type: "Chamber",
+  },
+  {
+    id: "partner-ramp",
+    name: "RAMP – Ministry of MSME",
+    logo: "/logos/ramp.svg",
+    type: "Government",
+  },
+  {
+    id: "partner-telangana",
+    name: "Government of Telangana",
+    logo: "/logos/telangana.svg",
+    type: "Government",
   },
 ];
 
@@ -176,6 +213,30 @@ export const policyBriefs: PolicyBrief[] = [
   },
 ];
 
+export const policyHighlights: PolicyHighlight[] = [
+  {
+    id: "highlight-dgft",
+    title: "DGFT simplifies EPCG documentation for MSMEs",
+    publishedOn: "05 Nov 2025",
+    source: "DGFT",
+    link: "#",
+  },
+  {
+    id: "highlight-fta",
+    title: "India–EU FTA consultations: call for sector inputs",
+    publishedOn: "01 Nov 2025",
+    source: "Ministry of Commerce",
+    link: "#",
+  },
+  {
+    id: "highlight-ramp",
+    title: "RAMP disbursement window for tech upgradation",
+    publishedOn: "28 Oct 2025",
+    source: "Ministry of MSME",
+    link: "#",
+  },
+];
+
 export const alliances: Alliance[] = [
   {
     id: "alliance-mou",
@@ -229,6 +290,30 @@ export const knowledgeResources: KnowledgeResource[] = [
   },
 ];
 
+export const knowledgePreview: KnowledgePreview[] = [
+  {
+    id: "preview-finance",
+    title: "Export Credit & Trade Finance Starter Kit",
+    description: "Step-by-step primer on ECGC cover, LC documentation, and pre/post shipment credit.",
+    format: "Guide",
+    link: "/knowledge#finance",
+  },
+  {
+    id: "preview-sustainability",
+    title: "ESG Compliance Roadmap for MSMEs",
+    description: "Checklist and templates for aligning with global ESG benchmarks.",
+    format: "Toolkit",
+    link: "/knowledge#esg",
+  },
+  {
+    id: "preview-certification",
+    title: "ISO 14001 Cohort – December 2025",
+    description: "Join the upcoming certification bootcamp curated with ASSOCHAM Sustainability Council.",
+    format: "Certification",
+    link: "/knowledge#iso",
+  },
+];
+
 export const marketInsights: MarketInsight[] = [
   {
     id: "insight-620520",
@@ -253,6 +338,27 @@ export const marketInsights: MarketInsight[] = [
     topMarkets: ["Singapore", "Qatar", "Canada"],
     exportValue: "USD 220M",
     growth: "+11% YoY",
+  },
+];
+
+export const marketPreview: MarketPreview[] = [
+  {
+    id: "preview-textiles",
+    hsCode: "620520",
+    summary: "Cotton apparel demand rising in EU with preference for sustainable sourcing.",
+    priorityMarkets: ["Germany", "France", "Netherlands"],
+  },
+  {
+    id: "preview-pharma",
+    hsCode: "300490",
+    summary: "Regulatory fast-tracks opened in LATAM for generics with WHO pre-qualification.",
+    priorityMarkets: ["Brazil", "Chile", "Peru"],
+  },
+  {
+    id: "preview-digital",
+    hsCode: "852380",
+    summary: "Smart logistics software deployments accelerating across GCC ports.",
+    priorityMarkets: ["UAE", "Saudi Arabia", "Qatar"],
   },
 ];
 

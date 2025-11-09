@@ -225,3 +225,33 @@ export type EngagementThread = {
   stage: "New Lead" | "Active Negotiation" | "Closed Won" | "Closed Lost";
 };
 
+export type PartnerAffiliation = {
+  id: string;
+  name: string;
+  logo: string;
+  type: "Government" | "Chamber" | "Institution";
+};
+
+export type PolicyHighlight = {
+  id: string;
+  title: string;
+  publishedOn: string;
+  source: string;
+  link?: string;
+};
+
+export type KnowledgePreview = {
+  id: string;
+  title: string;
+  description: string;
+  format: "Guide" | "Certification" | "Toolkit";
+  link: string;
+};
+
+export type MarketPreview = {
+  id: string;
+  hsCode: string;
+  summary: string;
+  priorityMarkets: string[];
+};
+
