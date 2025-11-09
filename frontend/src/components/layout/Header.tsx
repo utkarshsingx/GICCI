@@ -168,73 +168,74 @@ export const Header = () => {
         </div>
 
         {isMenuOpen ? (
-        <div
-          className={`fixed inset-0 z-[9999] bg-brand-navy/95 backdrop-blur-md transition-all duration-300 ease-out lg:hidden ${overlayClass}`}
-        >
           <div
-            className={`flex h-full flex-col overflow-y-auto pt-20 pb-10 transition-transform duration-300 ease-out ${
-              isMenuOpen ? "translate-y-0" : "translate-y-6"
-            }`}
+            className={`fixed inset-0 z-[9999] bg-brand-navy/95 backdrop-blur-md transition-all duration-300 ease-out lg:hidden ${overlayClass}`}
           >
-            <div className="flex items-center justify-between px-6 text-white">
-              <span className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-gold">
-                Navigation
-              </span>
-              <button
-                type="button"
-                onClick={closeMenu}
-                className="inline-flex items-center gap-2 rounded-full border border-white/30 px-3 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white hover:border-white hover:bg-white/10"
-              >
-                Close
-              </button>
-            </div>
-            <nav className="mt-6 flex flex-col gap-4 px-6 text-white">
-              <div className="grid gap-2 text-xs uppercase tracking-[0.3em] text-brand-gold">
-                {utilityLinks.map((link) => (
+            <div
+              className={`flex h-full flex-col overflow-y-auto pt-20 pb-10 transition-transform duration-300 ease-out ${
+                isMenuOpen ? "translate-y-0" : "translate-y-6"
+              }`}
+            >
+              <div className="flex items-center justify-between px-6 text-white">
+                <span className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-gold">
+                  Navigation
+                </span>
+                <button
+                  type="button"
+                  onClick={closeMenu}
+                  className="inline-flex items-center gap-2 rounded-full border border-white/30 px-3 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white hover:border-white hover:bg-white/10"
+                >
+                  Close
+                </button>
+              </div>
+              <nav className="mt-6 flex flex-col gap-4 px-6 text-white">
+                <div className="grid gap-2 text-xs uppercase tracking-[0.3em] text-brand-gold">
+                  {utilityLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={closeMenu}
+                      className="rounded-full border border-white/30 px-4 py-2 text-center font-semibold hover:border-white hover:bg-white/10"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+                <div className="my-4 h-px bg-white/30" />
+                {navLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
                     onClick={closeMenu}
-                    className="rounded-full border border-white/30 px-4 py-2 text-center font-semibold hover:border-white hover:bg-white/10"
+                    className={`w-full rounded-2xl border border-white/20 px-5 py-3 text-lg font-semibold tracking-wide ${
+                      isActiveLink(link.href) ? "bg-white text-brand-navy" : "bg-white/10"
+                    } transition hover:border-white hover:bg-white/20`}
                   >
                     {link.label}
                   </Link>
                 ))}
-              </div>
-              <div className="my-4 h-px bg-white/30" />
-              {navLinks.map((link) => (
+              </nav>
+              <div className="mb-10 mt-6 flex flex-col gap-3 px-6">
                 <Link
-                  key={link.href}
-                  href={link.href}
+                  href="/login"
                   onClick={closeMenu}
-                  className={`w-full rounded-2xl border border-white/20 px-5 py-3 text-lg font-semibold tracking-wide ${
-                    isActiveLink(link.href) ? "bg-white text-brand-navy" : "bg-white/10"
-                  } transition hover:border-white hover:bg-white/20`}
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-2xl border border-white/40 px-5 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10"
                 >
-                  {link.label}
+                  <span className="h-2 w-2 rounded-full bg-white" />
+                  Trade Login
                 </Link>
-              ))}
-            </nav>
-            <div className="mb-10 mt-6 flex flex-col gap-3 px-6">
-              <Link
-                href="/login"
-                onClick={closeMenu}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-2xl border border-white/40 px-5 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10"
-              >
-                <span className="h-2 w-2 rounded-full bg-white" />
-                Trade Login
-              </Link>
-              <Link
-                href="/join"
-                onClick={closeMenu}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-gold px-5 py-3 text-sm font-semibold text-brand-navy shadow-card transition hover:bg-white"
-              >
-                <span className="h-2 w-2 rounded-full bg-brand-navy" />
-                Join Network
-              </Link>
+                <Link
+                  href="/join"
+                  onClick={closeMenu}
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-gold px-5 py-3 text-sm font-semibold text-brand-navy shadow-card transition hover:bg-white"
+                >
+                  <span className="h-2 w-2 rounded-full bg-brand-navy" />
+                  Join Network
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
+        ) : null}
       </div>
     </header>
   );
