@@ -88,11 +88,11 @@ export const Header = () => {
             href="/"
             className="flex items-center gap-3 pr-2 md:gap-4 md:pr-4"
           >
-            <span className="flex h-9 w-9 items-center justify-center rounded-full border border-brand-blue/20 bg-brand-linear text-xs font-semibold text-white shadow-card md:h-11 md:w-11 md:text-sm">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-brand-blue/20 bg-brand-linear text-sm font-semibold text-white shadow-card md:h-11 md:w-11 md:text-sm">
               IE
             </span>
             <span className="flex flex-col gap-0.5">
-              <span className="font-display text-sm font-semibold leading-tight text-brand-navy md:text-base">
+              <span className="font-display text-base font-semibold leading-tight text-brand-navy md:text-base">
                 <span className="whitespace-nowrap">Import–Export</span>
                 <br />
                 <span className="whitespace-nowrap">Community</span>
