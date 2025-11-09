@@ -7,13 +7,19 @@ import { usePathname } from "next/navigation";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/policy", label: "Policy Advocacy" },
-  { href: "/sectors", label: "Sector Councils" },
-  { href: "/events", label: "Events & Delegations" },
-  { href: "/alliances", label: "Global Alliances" },
+  { href: "/policy", label: "Policy" },
+  { href: "/sectors", label: "Sectors" },
+  { href: "/events", label: "Events" },
+  { href: "/alliances", label: "Alliances" },
   { href: "/knowledge", label: "Knowledge" },
-  { href: "/market", label: "Market Intelligence" },
+  { href: "/market", label: "Reports" },
   { href: "/contact", label: "Contact" },
+];
+
+const utilityLinks = [
+  { href: "/contact", label: "Helpdesk" },
+  { href: "/policy", label: "Policy Cell" },
+  { href: "/join", label: "Prime Membership" },
 ];
 
 export const Header = () => {
@@ -41,24 +47,48 @@ export const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-xl">
-      <div className="border-b border-white/40 bg-white/70 shadow-glow">
-        <div className="container flex items-center justify-between py-4">
-          <Link href="/" className="flex items-center gap-4">
-            <span className="flex h-12 w-12 items-center justify-center rounded-full border border-brand-blue/20 bg-brand-linear text-base font-semibold text-white shadow-card">
+    <header className="sticky top-0 z-50">
+      {/* Utility ribbon */}
+      <div className="hidden border-b border-white/40 bg-white/80 shadow-glow md:block">
+        <div className="container flex items-center justify-between py-2 text-xs font-semibold">
+          <div className="flex items-center gap-2 text-brand-teal">
+            <span className="inline-flex h-2 w-2 rounded-full bg-brand-gold" />
+            <span className="uppercase tracking-[0.3em]">
+              Government of India · RAMP Initiative
+            </span>
+          </div>
+          <div className="flex items-center gap-4 text-brand-blue">
+            {utilityLinks.map((link) => (
+              <Link key={link.href} href={link.href} className="hover:text-brand-gold">
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="border-b border-white/40 bg-white/90 shadow-glow backdrop-blur-xl">
+        <div className="container grid items-center gap-y-3 py-3 md:grid-cols-[auto_1fr_auto] md:py-4">
+          <Link
+            href="/"
+            className="flex items-center gap-3 pr-2 md:gap-4 md:pr-4"
+          >
+            <span className="flex h-9 w-9 items-center justify-center rounded-full border border-brand-blue/20 bg-brand-linear text-xs font-semibold text-white shadow-card md:h-11 md:w-11 md:text-sm">
               IE
             </span>
-            <span className="flex flex-col gap-1">
-              <span className="font-display text-xl font-semibold leading-tight text-brand-navy">
-                Import–Export Community
+            <span className="flex flex-col gap-0.5">
+              <span className="font-display text-sm font-semibold leading-tight text-brand-navy md:text-base">
+                <span className="whitespace-nowrap">Import–Export</span>
+                <br className="hidden md:block" />
+                <span className="whitespace-nowrap">Community</span>
               </span>
-              <span className="text-[10px] font-medium uppercase tracking-[0.35em] text-brand-teal">
-                FICCI · CII · ASSOCHAM ALIGNED
+              <span className="text-[8px] font-medium uppercase tracking-[0.28em] text-brand-teal md:text-[9px]">
+                FICCI · CII · ASSOCHAM Aligned
               </span>
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-1 rounded-full border border-white/70 bg-white/80 px-3 py-2 shadow-glow lg:flex">
+          <nav className="hidden w-full max-w-4xl items-center justify-center gap-1 rounded-full border border-white/70 bg-white/90 px-3 py-2 shadow-glow md:mx-auto md:flex">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} className={linkClassName(link.href)}>
                 {link.label}
@@ -66,17 +96,19 @@ export const Header = () => {
             ))}
           </nav>
 
-          <div className="hidden items-center gap-3 lg:flex">
+          <div className="hidden items-center justify-end gap-2 rounded-full border border-white/70 bg-white/90 px-2 py-1 pl-4 shadow-glow md:flex">
             <Link
               href="/login"
-              className="inline-flex items-center rounded-full border border-brand-blue/40 bg-white px-6 py-2 text-sm font-semibold text-brand-blue transition hover:border-brand-blue hover:bg-brand-blue/10"
+              className="inline-flex items-center gap-2 rounded-xl border border-brand-blue/40 bg-white px-4 py-2 text-sm font-semibold text-brand-blue shadow-glow transition hover:border-brand-blue hover:bg-brand-blue/10"
             >
+              <span className="h-2 w-2 rounded-full bg-brand-blue" />
               Trade Login
             </Link>
             <Link
               href="/join"
-              className="inline-flex items-center gap-2 rounded-full border border-brand-blue/20 bg-brand-linear px-6 py-2 text-sm font-semibold text-white shadow-card transition hover:brightness-110"
+              className="inline-flex items-center gap-2 rounded-xl bg-brand-linear px-4 py-2 text-sm font-semibold text-white shadow-card transition hover:brightness-110"
             >
+              <span className="h-2 w-2 rounded-full bg-brand-gold" />
               Join Network
             </Link>
           </div>
@@ -84,53 +116,78 @@ export const Header = () => {
           <button
             type="button"
             onClick={() => setIsMenuOpen((prev) => !prev)}
-            className="inline-flex items-center gap-2 rounded-full border border-neutral-border/70 px-4 py-2 text-sm font-semibold text-brand-navy transition hover:border-brand-blue hover:bg-brand-blue/10 hover:text-brand-blue lg:hidden"
+            className="inline-flex items-center gap-3 rounded-full border border-brand-blue/30 bg-white px-4 py-2 text-sm font-semibold text-brand-navy shadow-glow transition hover:border-brand-blue hover:bg-brand-blue/10 hover:text-brand-blue lg:hidden"
             aria-expanded={isMenuOpen}
             aria-label="Toggle navigation menu"
           >
+            <span className="flex flex-col gap-1">
+              <span
+                className={`block h-[2px] w-5 rounded-full bg-brand-blue transition ${
+                  isMenuOpen ? "translate-y-[6px] rotate-45" : ""
+                }`}
+              />
+              <span
+                className={`block h-[2px] w-4 rounded-full bg-brand-blue transition ${
+                  isMenuOpen ? "opacity-0" : ""
+                }`}
+              />
+              <span
+                className={`block h-[2px] w-5 rounded-full bg-brand-blue transition ${
+                  isMenuOpen ? "-translate-y-[6px] -rotate-45" : ""
+                }`}
+              />
+            </span>
             Menu
-            <span className="text-xs font-medium text-brand-blue/70">▼</span>
           </button>
         </div>
-      </div>
 
-      <div
-        className={`lg:hidden ${
-          isMenuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
-        }`}
-      >
-        <div className="border-b border-neutral-border/60 bg-white/85 shadow-card backdrop-blur">
-          <nav className="container flex flex-col gap-3 py-6 text-sm font-semibold text-brand-navy">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`${linkClassName(
-                  link.href,
-                )} rounded-xl border border-transparent px-4 py-2 ${
-                  isActiveLink(link.href) ? "border-brand-blue/40" : ""
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-
-            <div className="mt-4 flex flex-col gap-2">
-              <Link
-                href="/login"
-                className="inline-flex items-center justify-center rounded-xl border border-brand-blue/60 px-4 py-3 text-sm font-semibold text-brand-blue transition hover:border-brand-blue hover:bg-brand-blue/10"
-              >
-                Trade Login
-              </Link>
-              <Link
-                href="/join"
-                className="inline-flex items-center justify-center rounded-xl bg-brand-linear px-4 py-3 text-sm font-semibold text-white shadow-card transition hover:brightness-110"
-              >
-                Join Network
-              </Link>
+        {isMenuOpen ? (
+          <div className="fixed inset-0 z-50 bg-brand-navy/85 backdrop-blur-md lg:hidden">
+            <div className="flex h-full flex-col justify-between">
+              <nav className="container mt-20 flex flex-col gap-4 text-white">
+                <div className="grid gap-2 text-xs uppercase tracking-[0.3em] text-brand-gold">
+                  {utilityLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="rounded-full border border-white/30 px-4 py-2 text-center font-semibold hover:border-white hover:bg-white/10"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+                <div className="my-4 h-px bg-white/30" />
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`rounded-2xl border border-white/20 px-5 py-3 text-lg font-semibold tracking-wide ${
+                      isActiveLink(link.href) ? "bg-white text-brand-navy" : "bg-white/10"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+              <div className="container mb-10 flex flex-col gap-3">
+                <Link
+                  href="/login"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/40 px-5 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10"
+                >
+                  <span className="h-2 w-2 rounded-full bg-white" />
+                  Trade Login
+                </Link>
+                <Link
+                  href="/join"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-gold px-5 py-3 text-sm font-semibold text-brand-navy shadow-card transition hover:bg-white"
+                >
+                  <span className="h-2 w-2 rounded-full bg-brand-navy" />
+                  Join Network
+                </Link>
+              </div>
             </div>
-          </nav>
-        </div>
+          </div>
+        ) : null}
       </div>
     </header>
   );
