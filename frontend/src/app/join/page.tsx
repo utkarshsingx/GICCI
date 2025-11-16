@@ -14,6 +14,8 @@ export default function JoinPage() {
         eyebrow="Join Network"
         title="Prime membership onboarding for MSMEs & trade partners"
         description="Submit your organisation profile to participate in matchmaking programmes, capacity building cohorts, and global trade delegations managed under FICCI, CII, and ASSOCHAM guidelines."
+        backgroundImage="/images/chuttersnap-fN603qcEA7g-unsplash.jpg"
+        imageAlt="Networking session for Telangana MSME onboarding"
       />
 
       <section className="container py-16">

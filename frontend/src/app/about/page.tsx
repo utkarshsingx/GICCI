@@ -13,6 +13,8 @@ export default function AboutPage() {
         eyebrow="About The Platform"
         title="Institutionally aligned trade facilitation ecosystem"
         description="Jagadeesh Private Limited partners with chambers and government programmes to deliver a digital-first platform that advances MSME competitiveness, international outreach, and policy feedback loops."
+        backgroundImage="/images/chuttersnap-fN603qcEA7g-unsplash.jpg"
+        imageAlt="Business leaders collaborating at a Telangana trade summit"
       />
       <AboutMissionSection />
       <AdvisoryCouncilSection />

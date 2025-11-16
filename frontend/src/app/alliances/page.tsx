@@ -11,6 +11,8 @@ export default function AlliancesPage() {
         eyebrow="Global Trade Alliances"
         title="Embassy desks, chambers, and cross-border partnership leads"
         description="Leverage institutional MoUs, embassy trade cells, and chamber networks to unlock market entry support, procurement opportunities, and bilateral engagements."
+        backgroundImage="/images/chuttersnap-kyCNGGKCvyw-unsplash.jpg"
+        imageAlt="Cargo vessels representing Telangana's global alliances"
       />
       <GlobalAlliancesSection />
       <StrategicPartnersSection />

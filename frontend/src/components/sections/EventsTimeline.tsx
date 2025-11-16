@@ -1,9 +1,11 @@
+import Image from "next/image";
+
 import { events } from "@/mocks/data";
 
 export const EventsTimeline = () => {
   return (
     <section className="container py-12 md:py-16">
-      <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+      <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand-teal">
             Events Timeline
@@ -12,12 +14,27 @@ export const EventsTimeline = () => {
             Upcoming delegations & policy briefings
           </h2>
           <p className="mt-3 text-sm text-neutral-muted">
-            Track chamber-led missions, webinars, and RBSMs to plan market outreach.
+            Track chamber-led missions, Hyderabad delegations, and RBSMs to plan market
+            outreach.
           </p>
         </div>
-        <a href="/events" className="text-sm font-semibold text-brand-blue hover:text-brand-gold">
-          View full calendar →
-        </a>
+        <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-end">
+          <a href="/events" className="text-sm font-semibold text-brand-blue hover:text-brand-gold">
+            View full calendar →
+          </a>
+          <figure className="relative h-48 w-full overflow-hidden rounded-2xl border border-brand-blue/20 bg-white/70 shadow-card md:w-64">
+            <Image
+              src="/images/ryan-kwok-zr4K6Q13Rrk-unsplash (1).jpg"
+              alt="Delegation meetings for Telangana exporters"
+              fill
+              sizes="(min-width: 768px) 256px, 100vw"
+              className="object-cover"
+            />
+            <figcaption className="absolute bottom-3 right-3 rounded-full bg-brand-navy/80 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-white">
+              Trade missions
+            </figcaption>
+          </figure>
+        </div>
       </div>
 
       <div className="mt-8 space-y-6">

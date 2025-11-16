@@ -11,6 +11,8 @@ export default function KnowledgePage() {
         eyebrow="Knowledge & Capacity Building"
         title="Guides, certifications, and export readiness toolkits"
         description="Access structured learning journeys, standards roadmaps, and chamber-issued toolkits to accelerate compliance and global expansion."
+        backgroundImage="/images/konstantin-dyadyun-RH760wgrHRc-unsplash.jpg"
+        imageAlt="Capacity building workshop for Telangana exporters"
       />
       <KnowledgeCapacitySection />
       <PolicyAdvocacySection />

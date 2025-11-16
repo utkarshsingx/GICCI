@@ -1,10 +1,12 @@
+import Image from "next/image";
+
 import { knowledgeResources } from "@/mocks/data";
 
 export const KnowledgeCapacitySection = () => {
   return (
     <section className="section-shell py-12 md:py-16" id="knowledge">
       <div className="container">
-        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-teal">
               Knowledge & Capacity Building
@@ -13,13 +15,28 @@ export const KnowledgeCapacitySection = () => {
               Training, certifications, and export readiness toolkits
             </h2>
             <p className="mt-4 text-sm">
-              Structured learning journeys aligned with Government of India programmes
-              to elevate compliance, finance, and market expansion capabilities.
+              Structured learning journeys aligned with Government of Telangana export
+              priorities and national programmes to elevate compliance, finance, and
+              market expansion capabilities.
             </p>
           </div>
-          <a href="#learning" className="text-sm font-semibold text-brand-blue">
-            View full learning library →
-          </a>
+          <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-end">
+            <a href="#learning" className="text-sm font-semibold text-brand-blue">
+              View full learning library →
+            </a>
+            <figure className="relative h-48 w-full overflow-hidden rounded-2xl border border-brand-blue/20 bg-white/60 shadow-card md:w-64">
+              <Image
+                src="/images/konstantin-dyadyun-RH760wgrHRc-unsplash.jpg"
+                alt="Capacity building workshop for Telangana MSMEs"
+                fill
+                sizes="(min-width: 768px) 256px, 100vw"
+                className="object-cover"
+              />
+              <figcaption className="absolute bottom-3 left-3 rounded-full bg-white/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-brand-navy">
+                Skilling cohorts
+              </figcaption>
+            </figure>
+          </div>
         </div>
 
         <div className="mt-8 grid gap-5 sm:grid-cols-2 md:grid-cols-3 md:gap-6">

@@ -1,0 +1,44 @@
+<svg width="640" height="480" viewBox="0 0 640 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tg-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F6AA9" />
+      <stop offset="1" stop-color="#12D5C4" />
+    </linearGradient>
+    <radialGradient id="tg-radial" cx="0.5" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#F4C95D" stop-opacity="0.9" />
+      <stop offset="1" stop-color="#F4C95D" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="640" height="480" fill="#041C32" />
+  <rect width="640" height="480" fill="url(#tg-radial)" />
+  <g opacity="0.3">
+    <path d="M0 80H640" stroke="#58C4DD" stroke-width="1" />
+    <path d="M0 160H640" stroke="#58C4DD" stroke-width="1" />
+    <path d="M0 240H640" stroke="#58C4DD" stroke-width="1" />
+    <path d="M0 320H640" stroke="#58C4DD" stroke-width="1" />
+    <path d="M0 400H640" stroke="#58C4DD" stroke-width="1" />
+    <path d="M80 0V480" stroke="#58C4DD" stroke-width="1" />
+    <path d="M160 0V480" stroke="#58C4DD" stroke-width="1" />
+    <path d="M240 0V480" stroke="#58C4DD" stroke-width="1" />
+    <path d="M320 0V480" stroke="#58C4DD" stroke-width="1" />
+    <path d="M400 0V480" stroke="#58C4DD" stroke-width="1" />
+    <path d="M480 0V480" stroke="#58C4DD" stroke-width="1" />
+    <path d="M560 0V480" stroke="#58C4DD" stroke-width="1" />
+  </g>
+  <path
+    d="M292 132L334 140L360 164L372 208L360 244L330 264L304 308L258 316L220 292L208 256L224 220L260 192L276 162L292 132Z"
+    fill="url(#tg-gradient)"
+    stroke="#F7F9FB"
+    stroke-width="4"
+    stroke-linejoin="round"
+  />
+  <g fill="#F7F9FB" font-family="Inter, sans-serif" font-size="18" font-weight="600">
+    <text x="360" y="120">Hyderabad</text>
+    <text x="120" y="420">Export Corridors</text>
+    <text x="360" y="420">Import Gateways</text>
+  </g>
+  <circle cx="348" cy="174" r="8" fill="#F4C95D" stroke="#041C32" stroke-width="2" />
+  <path d="M348 174C398 154 436 154 476 186" stroke="#F4C95D" stroke-width="3" stroke-linecap="round" />
+  <path d="M348 174C308 214 288 250 296 292" stroke="#F4C95D" stroke-width="3" stroke-linecap="round" />
+</svg>
+

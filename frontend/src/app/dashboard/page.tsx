@@ -16,6 +16,8 @@ export default function DashboardPage() {
         eyebrow="Member Workspace"
         title="Trade dashboard & onboarding centre"
         description="Review your KYC status, complete onboarding tasks, and prepare to engage with verified buyer–seller opportunities across sector councils."
+        backgroundImage="/images/andy-li-CpsTAUPoScw-unsplash.jpg"
+        imageAlt="Logistics hub representing live dashboard metrics"
       />
 
       <main className="container py-16">

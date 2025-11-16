@@ -11,6 +11,8 @@ export default function ContactPage() {
         eyebrow="Contact & Support"
         title="Reach the dedicated trade facilitation helpdesk"
         description="Access MSME support desks, partnership teams, and policy advocacy coordinators for timely assistance on membership, compliance, and global outreach."
+        backgroundImage="/images/john-simmons-N7_NUUtCkDU-unsplash.jpg"
+        imageAlt="Policy taskforce coordinating trade support"
       />
       <ContactSupportSection />
       <StrategicPartnersSection />

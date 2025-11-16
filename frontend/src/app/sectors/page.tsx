@@ -11,6 +11,8 @@ export default function SectorsPage() {
         eyebrow="Sector Councils"
         title="Industry-led councils shaping export competitiveness"
         description="Join sector councils tailored to textiles, pharmaceuticals, IT, and high-growth clusters to access curated opportunities, analytics, and mentorship."
+        backgroundImage="/images/ryan-kwok-zr4K6Q13Rrk-unsplash (1).jpg"
+        imageAlt="Sector council leaders strategising market expansion"
       />
       <SectorCouncilGrid />
       <BuyerSellerEngagementSection />

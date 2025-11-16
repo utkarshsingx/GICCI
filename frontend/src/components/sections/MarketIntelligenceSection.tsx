@@ -1,9 +1,11 @@
+import Image from "next/image";
+
 import { marketInsights } from "@/mocks/data";
 
 export const MarketIntelligenceSection = () => {
   return (
     <section className="container py-12 md:py-16" id="market">
-      <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+      <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
         <div className="max-w-xl">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-teal">
             Market Intelligence & Reports
@@ -13,26 +15,42 @@ export const MarketIntelligenceSection = () => {
           </h2>
           <p className="mt-4 text-sm">
             Discover high-growth markets, compare export values, and prioritise
-            expansion routes backed by FIEO and India Trade Portal datasets.
+            expansion routes with Telangana EXIM cell analytics enriched by FIEO and
+            DGFT datasets.
           </p>
         </div>
-        <form className="glass-panel flex flex-col gap-3 md:w-80">
-          <label htmlFor="hs-search" className="text-xs font-semibold uppercase tracking-wide text-brand-teal">
-            HS Code Quick Lookup
-          </label>
-          <input
-            id="hs-search"
-            type="text"
-            placeholder="Try 620520 or 300490"
-            className="rounded-lg border border-brand-blue/30 px-3 py-2 text-sm outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/40"
-          />
-          <button
-            type="submit"
-            className="rounded-lg bg-brand-blue px-3 py-2 text-sm font-semibold text-white transition hover:bg-brand-gold hover:text-brand-navy"
-          >
-            Search
-          </button>
-        </form>
+        <div className="flex flex-col gap-4 md:w-80">
+          <figure className="overflow-hidden rounded-2xl border border-brand-blue/20 bg-white/90 shadow-card">
+            <Image
+              src="/images/telangana-trade-map.svg"
+              alt="Telangana trade intelligence visual"
+              width={480}
+              height={360}
+              className="h-full w-full object-cover"
+            />
+            <figcaption className="px-4 py-2 text-center text-xs font-semibold uppercase tracking-[0.25em] text-brand-blue">
+              Export focus districts
+            </figcaption>
+          </figure>
+
+          <form className="glass-panel flex flex-col gap-3">
+            <label htmlFor="hs-search" className="text-xs font-semibold uppercase tracking-wide text-brand-teal">
+              HS Code Quick Lookup
+            </label>
+            <input
+              id="hs-search"
+              type="text"
+              placeholder="Try 620520 or 300490"
+              className="rounded-lg border border-brand-blue/30 px-3 py-2 text-sm outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/40"
+            />
+            <button
+              type="submit"
+              className="rounded-lg bg-brand-blue px-3 py-2 text-sm font-semibold text-white transition hover:bg-brand-gold hover:text-brand-navy"
+            >
+              Search
+            </button>
+          </form>
+        </div>
       </div>
 
       <div className="mt-8 grid gap-5 sm:grid-cols-2 md:grid-cols-3 md:gap-6">

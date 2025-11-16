@@ -32,6 +32,8 @@ export default function LoginPage() {
         eyebrow="Trade Login"
         title="Access your trade facilitation workspace"
         description="Secure entry point for MSMEs, importers, exporters, and policy administrators to manage listings, engagements, and compliance."
+        backgroundImage="/images/chuttersnap-fN603qcEA7g-unsplash.jpg"
+        imageAlt="Business leaders collaborating in a secure workspace"
       />
 
       <section className="container my-10 grid gap-6 md:grid-cols-3">

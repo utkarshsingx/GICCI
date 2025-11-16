@@ -11,6 +11,8 @@ export default function MarketPage() {
         eyebrow="Market Intelligence & Reports"
         title="HS-code analytics and export performance dashboards"
         description="Surface verified trade insights from India Trade Portal, FIEO datasets, and embassy networks to prioritise expansion markets."
+        backgroundImage="/images/andy-li-CpsTAUPoScw-unsplash.jpg"
+        imageAlt="Export containers representing HS-code analytics"
       />
       <MarketIntelligenceSection />
       <BuyerSellerEngagementSection />

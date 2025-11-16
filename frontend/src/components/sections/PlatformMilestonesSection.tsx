@@ -8,7 +8,7 @@ export const PlatformMilestonesSection = () => {
           Platform Roadmap
         </p>
         <h2 className="mt-2 text-3xl font-semibold text-brand-navy">
-          Milestones in building India&apos;s trade facilitation hub
+          Milestones in building Telangana&apos;s trade facilitation hub
         </h2>
 
         <div className="mt-8 space-y-6">

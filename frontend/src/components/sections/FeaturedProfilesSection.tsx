@@ -1,9 +1,11 @@
+import Image from "next/image";
+
 import { featuredProfiles } from "@/mocks/data";
 
 export const FeaturedProfilesSection = () => {
   return (
     <section className="container py-12 md:py-16" id="featured">
-      <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+      <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-teal">
             Buyer–Seller Engagement
@@ -16,12 +18,26 @@ export const FeaturedProfilesSection = () => {
             compliance excellence, and sector leadership.
           </p>
         </div>
-        <a
-          href="#matchmaking"
-          className="text-sm font-semibold text-brand-blue hover:text-brand-gold"
-        >
-          View buyer–seller matchmaking →
-        </a>
+        <div className="flex flex-col items-start gap-4 md:flex-row md:items-end md:justify-end">
+          <a
+            href="#matchmaking"
+            className="text-sm font-semibold text-brand-blue hover:text-brand-gold"
+          >
+            View buyer–seller matchmaking →
+          </a>
+          <figure className="relative h-48 w-full overflow-hidden rounded-2xl border border-brand-blue/20 bg-white/60 shadow-card md:w-64">
+            <Image
+              src="/images/chuttersnap-fN603qcEA7g-unsplash.jpg"
+              alt="Export leaders networking at Hyderabad trade summit"
+              fill
+              sizes="(min-width: 768px) 256px, 100vw"
+              className="object-cover"
+            />
+            <figcaption className="absolute bottom-3 left-3 rounded-full bg-white/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-brand-navy">
+              Prime success
+            </figcaption>
+          </figure>
+        </div>
       </div>
 
       <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">

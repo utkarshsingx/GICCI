@@ -186,7 +186,7 @@ export const Header = () => {
           <div className="flex items-center gap-2 text-brand-teal">
             <span className="inline-flex h-2 w-2 rounded-full bg-brand-gold" />
             <span className="uppercase tracking-[0.3em]">
-              Government of India · RAMP Initiative
+              Government of Telangana · Global Markets Mission
             </span>
           </div>
           <div className="flex items-center gap-4 text-brand-blue">

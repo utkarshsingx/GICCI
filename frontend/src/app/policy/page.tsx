@@ -11,6 +11,8 @@ export default function PolicyPage() {
         eyebrow="Policy Advocacy Hub"
         title="Stay ahead of policy updates and co-create export-friendly reforms"
         description="Access curated advisories from FICCI, CII, and ASSOCHAM policy cells, track new MSME schemes, and share ground-level inputs for national representations."
+        backgroundImage="/images/john-simmons-N7_NUUtCkDU-unsplash.jpg"
+        imageAlt="Policy roundtable discussing export reforms"
       />
       <PolicyAdvocacySection />
       <PolicyFeedbackSection />

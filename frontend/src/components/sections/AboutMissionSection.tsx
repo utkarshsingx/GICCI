@@ -10,15 +10,15 @@ export const AboutMissionSection = () => {
             Establishing a unified digital ecosystem for international trade facilitation
           </h2>
           <p className="text-sm text-neutral-muted">
-            The Import–Export Community Platform is modelled on FICCI, CII, and
-            ASSOCHAM frameworks to ensure institutional credibility, policy alignment,
-            and sustainable cross-border growth for MSMEs.
+            The Import–Export Community Platform places Telangana&apos;s exporters at the
+            centre while drawing on FICCI, CII, and ASSOCHAM playbooks to ensure
+            institutional credibility, policy alignment, and sustainable cross-border
+            growth.
           </p>
           <p className="text-sm text-neutral-muted">
-            Built in partnership with Government of India&apos;s RAMP initiative and the
-            Government of Telangana, the platform supports export growth, import
-            substitution, and competitiveness through verified connections and policy
-            engagement.
+            Co-created with the Government of Telangana and aligned with national
+            RAMP incentives, the platform supports export growth, import substitution,
+            and competitiveness through verified connections and policy engagement.
           </p>
         </div>
         <div className="space-y-4 rounded-2xl border border-brand-blue/20 bg-white p-8 shadow-card">
